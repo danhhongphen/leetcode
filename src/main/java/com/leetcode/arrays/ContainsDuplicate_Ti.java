@@ -39,6 +39,31 @@ public class ContainsDuplicate_Ti {
         return false;
     }
 
+    /*  Question 1:
+        Bth em hoc may cai thuat toan sap xep nhu la bubble sort thi no co do phuc tap la O(n^2),
+        thi bay gio lam sao de em xac dinh duoc cai do phuc tap cua Arrays.sort() nay anh Phen ?
+    */
+    public boolean hasDuplicateWithArraysMethod(int [] nums){
+        Arrays.sort(nums); // Ascending order
+        int numsSize = nums.length;
+        for (int i = 1; i < numsSize; ++i){
+            if (nums[i] == nums[i - 1])
+                return true;
+        }
+        return false;
+    }
+
+    public boolean hasDuplicateMostBasic(int[] nums) {
+        int numsSize = nums.length;
+        for (int i = 0; i < numsSize - 1; ++i){
+            for (int j = i + 1; j < numsSize; ++j) {
+                if (nums[i] == nums[j])
+                    return true;
+            }
+        }
+        return false;
+    }
+
     // add main method for quick testing (Optional)
     public static void main(String [] args){
         ContainsDuplicate_Ti sol = new ContainsDuplicate_Ti();
