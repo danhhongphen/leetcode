@@ -6,6 +6,7 @@ import java.util.HashSet;
 
 public class ContainsDuplicate_Ti {
 
+
     public boolean hasDuplicateWithHashMap(int[] nums) {
         HashMap<Integer, Integer> seen = new HashMap<>();
         for (int num : nums) {
@@ -16,6 +17,11 @@ public class ContainsDuplicate_Ti {
         return false;
     }
 
+    /**
+     * Lúc phỏng vấn ko dùng mấy cái stream này nha,
+     * Do có thể nguoi phỏng vấn ko rành Java
+     * Vòng này quan trọng cách giải quyết vấn đề của mình thôi
+     */
     public boolean hasDuplicateWithStream(int[] nums) {
         // Arrays.stream(tên mảng, collection, list) --> nghĩa là chuyển mảng thành 1 luồng (stream)
         // .stream(nums) --> để xử lý dữ liệu theo kiểu hàm (functional)
@@ -31,8 +37,9 @@ public class ContainsDuplicate_Ti {
         HashSet<Integer> seen = new HashSet<>();
 
         for (int num : nums){
-            if (seen.contains(num))
+            if (seen.contains(num)) {
                 return true;
+            } // bất kỳ if nào cũng phải {}
             seen.add(num);
         }
 
@@ -42,6 +49,10 @@ public class ContainsDuplicate_Ti {
     /*  Question 1:
         Bth em hoc may cai thuat toan sap xep nhu la bubble sort thi no co do phuc tap la O(n^2),
         thi bay gio lam sao de em xac dinh duoc cai do phuc tap cua Arrays.sort() nay anh Phen ?
+
+        -> Em tải thư viện vào coi function Arrays.sort(nums); xem nó dung gì là biết nha
+        -> dùng intellij coi được nha
+        -> DualPivotQuicksort
     */
     public boolean hasDuplicateWithArraysMethod(int [] nums){
         Arrays.sort(nums); // Ascending order
