@@ -2,7 +2,7 @@ package com.leetcode.arrays;
 
 public class ValidPalindrome_Ti {
     public boolean isPalindrome(String s) {
-        // validate input s = null line 9 throw exception
+        // validate input s = null -> line 9 throw null pointer exception
 
         String regex = "[^a-zA-z0-9]";
         s = s.trim().toLowerCase().replaceAll(regex, ""); // Không nên thay đổi input -> tạo biến mơ
