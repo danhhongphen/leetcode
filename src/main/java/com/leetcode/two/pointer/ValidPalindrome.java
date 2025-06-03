@@ -4,7 +4,7 @@ public class ValidPalindrome {
     public boolean isPalindrome(String s) {
         // không check input -> s = null line 7 throw null pointer exception
 
-        s = s.toLowerCase().replaceAll("[^a-zA-Z0-9]", "");
+        s = s.toLowerCase().replaceAll("[^a-zA-Z0-9]", ""); // ko nên modify input
         if(s.length() == 1) {
             return false;
         }
