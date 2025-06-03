@@ -1,7 +1,9 @@
 package com.leetcode.two.pointer;
 
 public class ValidPalindrome {
-    public boolean isPalindrome(String s){
+    public boolean isPalindrome(String s) {
+        // không check input -> s = null line 7 throw null pointer exception
+
         s = s.toLowerCase().replaceAll("[^a-zA-Z0-9]", "");
         if(s.length() == 1) {
             return false;
