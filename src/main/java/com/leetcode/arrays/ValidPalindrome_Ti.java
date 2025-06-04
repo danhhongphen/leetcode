@@ -4,14 +4,15 @@ public class ValidPalindrome_Ti {
     // Method1: Myself
     // [^] --> means if not some value in square bracket
     public boolean isPalindrome(String s) {
+        // validate input s = null -> line 9 throw null pointer exception
+
         String regex = "[^a-zA-z0-9]";
-        s = s.trim().toLowerCase().replaceAll(regex, "");
+        s = s.trim().toLowerCase().replaceAll(regex, ""); // Không nên thay đổi input -> tạo biến mơ
         System.out.println("String s after being preprocessed: " + s);
         int sLength = s.length();
         System.out.println("String sLength after being preprocessed: " + sLength);
-        for (int i = 0; i < (sLength / 2); ++i){
-            if (s.charAt(i) != s.charAt(sLength - i - 1))
-            {
+        for (int i = 0; i < (sLength / 2); ++i) {
+            if (s.charAt(i) != s.charAt(sLength - i - 1)) {
                 return false;
             }
         }
