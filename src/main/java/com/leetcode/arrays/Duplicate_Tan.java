@@ -69,21 +69,21 @@ public class Duplicate_Tan {
         int[] arr3 = {};
 
         System.out.println("Check array 1"); 
-        System.out.println("2 Loops:" + sol.hasDuplicate1(arr1)); 
-        System.out.println("Sort + Check:" + sol.hasDuplicate2(arr1)); 
-        System.out.println("Tree Set:" + sol.hasDuplicate3(arr1));
-        System.out.println("Hash Set:" + sol.hasDuplicate4(arr1)); 
+        System.out.println("2 Loops: " + sol.hasDuplicate1(arr1)); 
+        System.out.println("Sort+Check: " + sol.hasDuplicate2(arr1)); 
+        System.out.println("Tree Set: " + sol.hasDuplicate3(arr1));
+        System.out.println("Hash Set: " + sol.hasDuplicate4(arr1)); 
 
         System.out.println("\nCheck array 2"); 
-        System.out.println("2 Loops:" + sol.hasDuplicate1(arr2)); 
-        System.out.println("Sort + Check:" + sol.hasDuplicate2(arr2)); 
-        System.out.println("Tree Set:" + sol.hasDuplicate3(arr2));
-        System.out.println("Hash Set:" + sol.hasDuplicate4(arr2)); 
+        System.out.println("2 Loops: " + sol.hasDuplicate1(arr2)); 
+        System.out.println("Sort+Check: " + sol.hasDuplicate2(arr2)); 
+        System.out.println("Tree Set: " + sol.hasDuplicate3(arr2));
+        System.out.println("Hash Set: " + sol.hasDuplicate4(arr2)); 
         
         System.out.println("\nCheck array 3"); 
-        System.out.println("2 Loops:" + sol.hasDuplicate1(arr3)); 
-        System.out.println("Sort + Check:" + sol.hasDuplicate2(arr3)); 
-        System.out.println("Tree Set:" + sol.hasDuplicate3(arr3));
-        System.out.println("Hash Set:" + sol.hasDuplicate4(arr3)); 
+        System.out.println("2 Loops: " + sol.hasDuplicate1(arr3)); 
+        System.out.println("Sort+Check :" + sol.hasDuplicate2(arr3)); 
+        System.out.println("Tree Set: " + sol.hasDuplicate3(arr3));
+        System.out.println("Hash Set: " + sol.hasDuplicate4(arr3)); 
     }
 }
