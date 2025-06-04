@@ -3,7 +3,8 @@ package com.leetcode.arrays;
 public class Palindrome_Tan {
     // So sánh đầu cuối
     public static boolean isPalindrome(String s) {
-        s = s.replaceAll("[^A-Za-z0-9]", "").toLowerCase();
+        // validate input -> if s = null, throw null pointer exception at line 7
+        s = s.replaceAll("[^A-Za-z0-9]", "").toLowerCase(); // do not modify input -> create new
         char[] array = s.toCharArray();
         int n = array.length;
         for (int i = 0; i < n / 2; i++) {
@@ -17,7 +18,7 @@ public class Palindrome_Tan {
     // Đảo chuỗi và so sánh 
     public static boolean isPalindrome1(String s) {
         s = s.replaceAll("[^A-Za-z0-9]", "").toLowerCase();
-        String reversed = new StringBuilder(s).reverse().toString();
+        String reversed = new StringBuilder(s).reverse().toString(); // don't use this in the interview -> reverse() is library
         return s.equals(reversed);
     }
 
