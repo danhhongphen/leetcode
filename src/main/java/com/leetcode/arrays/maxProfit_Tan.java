@@ -13,17 +13,20 @@ public class maxProfit_Tan {
     }
     return maxProfit;
     }
+
+
     public int maxProfit1(int[] prices) {
+        // Please align your code properly.
     int maxProfit = 0;
-    int minBuy=100;
+    int minBuy=100; // use minBuy = prices[0] -> then if (minBuy < prices[i]) -> minBuy = prices[i]
     for (int i = 0; i < prices.length; i++) {
         if (minBuy > prices[i]) {
-            minBuy=prices[i];
+            minBuy=prices[i]; // add space before and after =
         }
-        int maxProfitTemp = prices[i] - minBuy;
-        if(maxProfitTemp>maxProfit)
+        int maxProfitTemp = prices[i] - minBuy; // why naming maxProfitTemp -> only int profit =
+        if(maxProfitTemp>maxProfit) // please use only one format for {}
         {
-            maxProfit=maxProfitTemp;
+            maxProfit=maxProfitTemp; // add space before and after =
         }
     }
     return maxProfit;
