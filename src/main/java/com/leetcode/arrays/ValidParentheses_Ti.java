@@ -1,5 +1,6 @@
 package com.leetcode.arrays;
 
+import java.util.HashMap;
 import java.util.Stack;
 
 public class ValidParentheses_Ti
@@ -65,22 +66,76 @@ public class ValidParentheses_Ti
     }
 
 
+    public boolean isValidSwitchCase(String s)
+    {
+        /*
+            The second validate case --> is if String s is totally space
+        * */
+        if (s == null || s.trim().isEmpty() || s.isEmpty())
+        {
+            return false;
+        }
+        Stack<Character> myStack = new Stack<>();
+        for (Character c : s.toCharArray())
+        {
+            switch (c)
+            {
+                case '(':
+                case '[':
+                case '{':
+                    myStack.push(c);
+                    break;
+
+                case ')':
+                    if (myStack.isEmpty() || myStack.pop() != '(')
+                    {
+                        return false;
+                    }
+                    break;
+
+                case ']':
+                    if (myStack.isEmpty() || myStack.pop() != '[')
+                    {
+                        return false;
+                    }
+                    break;
+
+                case '}':
+                    if (myStack.isEmpty() || myStack.pop() != '{')
+                    {
+                        return false;
+                    }
+                    break;
+            }
+        }
+        return myStack.isEmpty();
+    }
+
+
+
     public static void main(String []args)
     {
         ValidParentheses_Ti sol = new ValidParentheses_Ti();
         String str1 = "";
         System.out.println("Output for str1: " + sol.isValid(str1)); // return false
+        System.out.println("Output for str1 sc: " + sol.isValidSwitchCase(str1)); // return false
         String str2 = "        ";
         System.out.println("Output for str2: " + sol.isValid(str2)); // return false
+        System.out.println("Output for str2 sc: " + sol.isValidSwitchCase(str2)); // return false
         String str3 = null;
         System.out.println("Output for str3: " + sol.isValid(str3)); // return false
+        System.out.println("Output for str3 sc: " + sol.isValidSwitchCase(str3)); // return false
         String str4 = "()";
         System.out.println("Output for str4: " + sol.isValid(str4)); // return true
+        System.out.println("Output for str4 sc: " + sol.isValidSwitchCase(str4)); // return true
         String str5 = "()[]{}";
         System.out.println("Output for str5: " + sol.isValid(str5)); // return true
+        System.out.println("Output for str5 sc: " + sol.isValidSwitchCase(str5)); // return true
         String str6 = "(]";
         System.out.println("Output for str6: " + sol.isValid(str6)); // return false
+        System.out.println("Output for str6 sc: " + sol.isValidSwitchCase(str6)); // return false
         String str7 = "([])";
         System.out.println("Output for str7: " + sol.isValid(str7)); // return true
+        System.out.println("Output for str7 sc: " + sol.isValidSwitchCase(str7)); // return true
     }
 }
