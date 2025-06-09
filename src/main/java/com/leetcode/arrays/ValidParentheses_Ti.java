@@ -22,6 +22,8 @@ public class ValidParentheses_Ti
         {
             return false;
         }
+
+        //Check Thùy’s solution to see how the bracket is stored
         Stack<Character> myStack = new Stack<>();
         for (Character c : s.toCharArray())
         {
@@ -62,7 +64,7 @@ public class ValidParentheses_Ti
         {
             return false;
         }
-
+//        return myStack.isEmpty();
     }
 
 
