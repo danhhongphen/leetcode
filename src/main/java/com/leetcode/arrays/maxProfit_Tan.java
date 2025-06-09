@@ -1,5 +1,4 @@
 package com.leetcode.arrays;
-import java.util.Arrays;
 public class maxProfit_Tan {
     public int maxProfit(int[] prices) {
     int maxProfit = 0;
