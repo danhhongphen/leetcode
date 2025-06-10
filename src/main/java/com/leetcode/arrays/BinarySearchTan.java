@@ -1,6 +1,5 @@
 package com.leetcode.arrays;
 class Solution {
-
     public int binary_search(int l, int r, int[] nums, int target) {
         if (l > r) return -1;
         
@@ -51,8 +50,8 @@ class Solution {
         int[] nums2 = {};
         int target2 = 1;
 
-        int[] nums3 = {-1};
-        int target3 = -1;
+        int[] nums3 = {-1,0,2,4,6,8};
+        int target3 = 4;
 
         System.out.println("Test 1");
         System.out.println(sol.search(nums, target));
@@ -69,6 +68,5 @@ class Solution {
         System.out.println("Test 4");
         System.out.println(sol.search(nums3, target3));
         System.out.println(sol.search1(nums3, target3));
-        
     }
 }

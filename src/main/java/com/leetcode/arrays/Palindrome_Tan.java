@@ -39,7 +39,7 @@ public class Palindrome_Tan {
     }
     return true;
 }
- public static void main(String[] args) {
+    public static void main(String[] args) {
         String[] testCases = {
             "Was it a car or a cat I saw?",
             "tab a cat",
