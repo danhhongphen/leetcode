@@ -37,6 +37,30 @@ public class ReverseLinkedList_Ti {
         return head;
     }
 
+    public ListNode reverseList_2(ListNode head) {
+        if (head == null){
+            return null;
+        }
+        ListNode pre = null; // because at the initial head node, there is no node before
+        ListNode current = head;
+
+        while(current != null){
+            // nghia la phai luu lai cai node ben phai cua cai current,
+            // tai gi minh se be cai node tiep theo cua curr la node ben trai (reverse)
+            ListNode currentNext = current.next;
+
+            // pre thanh current, current se qua node tiep theo ben phai nghia la
+            // pre[current] --> current[node ben phai cua current]
+            pre = current;
+            current = currentNext;
+        }
+        //current da di toi node cuoi cung cua danh sach lien ket ban dau roi
+        // --> nghia la prev da toi cai tail
+        // --> return cai tail chinh la cai head cua reverse list
+        return pre;
+    }
+
+
     public ListNode createLinkedListFromArray(int[] arr){
         if (arr == null || arr.length == 0){
             return null;
