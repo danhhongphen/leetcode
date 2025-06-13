@@ -1,12 +1,18 @@
 package com.leetcode.arrays;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
 public class KthLargest {
     /*
      * Ý tưởng
      * B1: Kiểm tra độ dài mảng
      * Nếu rỗng trả về null
      * Nếu <k trả về min mảng
-     * Nếu >k sắp xếp lại từ cao -> thấp và trả ra giá trị thứ k
+     * Nếu >k sắp xếp lại từ cao -> thấp và trả ra giá trị thứ k-1
      */
+    /* 
     private int temp; // why not k ?
     private int[] stream;
     private int findMin(int[] arr) {
@@ -53,6 +59,29 @@ public class KthLargest {
         }
         sortDescending(stream);
         return stream[temp - 1];
+    }
+*/
+    private int k;
+    private List<Integer> stream;
+
+    public KthLargest(int k, int[] nums) {
+        this.k = k;
+        this.stream = new ArrayList<>();
+        for (int num : nums) {
+            stream.add(num);
+        }
+    }
+
+    public Integer add(int val) {
+        stream.add(val);
+        if (stream.size() == 0) {
+            return null;
+        }
+        if (stream.size() < k) {
+            return Collections.min(stream);
+        }
+        stream.sort(Collections.reverseOrder());
+        return stream.get(k - 1);
     }
 
     public static void main(String[] args) {
