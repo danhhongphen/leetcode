@@ -7,7 +7,7 @@ public class KthLargest {
      * Nếu <k trả về min mảng
      * Nếu >k sắp xếp lại từ cao -> thấp và trả ra giá trị thứ k
      */
-    private int temp;
+    private int temp; // why not k ?
     private int[] stream;
     private int findMin(int[] arr) {
         int min = arr[0];
