@@ -48,7 +48,7 @@ public class ReverseLinkedList_Ti {
             // nghia la phai luu lai cai node ben phai cua cai current,
             // tai gi minh se be cai node tiep theo cua curr la node ben trai (reverse)
             ListNode currentNext = current.next;
-
+            // have you tested it ? I see it's missing current.next = pre ?
             // pre thanh current, current se qua node tiep theo ben phai nghia la
             // pre[current] --> current[node ben phai cua current]
             pre = current;
